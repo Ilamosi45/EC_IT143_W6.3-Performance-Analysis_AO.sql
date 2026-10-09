@@ -20,7 +20,6 @@ WHERE Title = 'Ms.';
 CREATE NONCLUSTERED INDEX IX_Person_Title
 ON [Person].[Person] ([Title])
 INCLUDE ([BusinessEntityID], [FirstName], [LastName]);
-GO
 
 -- 3. Re-run the query above to confirm the performance improvement (Index Seek).
 SELECT BusinessEntityID, FirstName, LastName, Title
