@@ -4,7 +4,7 @@ This repository contains the deliverables for the **6.3 Performance Analysis** a
 
 ---
 
-## 📋 Deliverables Included
+## Deliverables Included
 
 1. **Performance Analysis Script:** `SQL_Performance_Analysis.sql` (Optimized queries and index creation scripts).
 2. **Demonstration Video:** A 5-minute practical walkthrough demonstrating performance gains and tools overview.
@@ -12,7 +12,7 @@ This repository contains the deliverables for the **6.3 Performance Analysis** a
 
 ---
 
-## 🛠️ Optimization Scenarios
+## Optimization Scenarios
 
 To prompt SQL Server to generate missing index recommendations, two purposefully unoptimized queries were run against the `AdventureWorks2019` database with the **Actual Execution Plan** enabled.
 
@@ -28,7 +28,7 @@ To prompt SQL Server to generate missing index recommendations, two purposefully
 
 ---
 
-## 🔍 SQL Server Profiler Quick Reference
+## SQL Server Profiler Quick Reference
 
 As demonstrated in the submission walkthrough, **SQL Server Profiler** acts as a powerful traffic analyzer for database administrators. 
 
@@ -46,7 +46,7 @@ As demonstrated in the submission walkthrough, **SQL Server Profiler** acts as a
 
 ---
 
-## 🚀 Reverting Changes (Database Maintenance)
+## Reverting Changes (Database Maintenance)
 To return your local copy of `AdventureWorks2019` to its default architectural state post-grading, execute the teardown statements included in the cleanup pipeline file:
 
 ```sql
