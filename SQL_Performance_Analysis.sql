@@ -5,7 +5,6 @@
 -- =================================================================================
 
 USE AdventureWorks2019;
-GO
 
 -- =================================================================================
 -- ACTIVITY 1: Person.Person Table Performance Analysis
@@ -16,7 +15,6 @@ GO
 SELECT BusinessEntityID, FirstName, LastName, Title
 FROM Person.Person
 WHERE Title = 'Ms.';
-GO
 
 -- 2. Execute the generated index creation script below:
 CREATE NONCLUSTERED INDEX IX_Person_Title
@@ -28,7 +26,6 @@ GO
 SELECT BusinessEntityID, FirstName, LastName, Title
 FROM Person.Person
 WHERE Title = 'Ms.';
-GO
 
 
 -- =================================================================================
@@ -40,16 +37,13 @@ GO
 SELECT SalesOrderID, SalesOrderDetailID, CarrierTrackingNumber, LineTotal
 FROM Sales.SalesOrderDetail
 WHERE CarrierTrackingNumber = '4E0A-4F89-AE';
-GO
 
 -- 2. Execute the generated index creation script below:
 CREATE NONCLUSTERED INDEX IX_SalesOrderDetail_CarrierTrackingNumber
 ON [Sales].[SalesOrderDetail] ([CarrierTrackingNumber])
 INCLUDE ([SalesOrderID], [SalesOrderDetailID], [LineTotal]);
-GO
 
 -- 3. Re-run the query above to confirm the performance improvement (Index Seek).
 SELECT SalesOrderID, SalesOrderDetailID, CarrierTrackingNumber, LineTotal
 FROM Sales.SalesOrderDetail
 WHERE CarrierTrackingNumber = '4E0A-4F89-AE';
-GO
